@@ -1,0 +1,6 @@
+.input-white-placeholder::placeholder {
+    color: white;
+  }
+  #input-with-icon-adornment{
+    color: white;
+  }

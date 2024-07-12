@@ -1,14 +1,12 @@
-import React from 'react'
-import LoginForn from '../../../components/Forms/LoginForn'
+import React from "react";
+import LoginForn from "../../../components/Forms/LoginForn";
 
 function LoginPage() {
-  console.log(';;;');
   return (
     <div>
-      
-      <LoginForn/>
+      <LoginForn />
     </div>
-  )
+  );
 }
 
-export default LoginPage
+export default LoginPage;

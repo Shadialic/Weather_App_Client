@@ -9,7 +9,7 @@ import { LoginData } from "../../Api/Apis";
 import toast, { Toaster } from "react-hot-toast";
 
 function LoginFprm() {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -23,7 +23,7 @@ function LoginFprm() {
     });
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const userData = await LoginData({
@@ -39,7 +39,6 @@ function LoginFprm() {
       toast.error("Login failed. Please try again.");
     }
     console.log("Form submitted", formData);
-  
   };
 
   return (
@@ -68,7 +67,6 @@ function LoginFprm() {
               <div className="form">
                 <div className="mb-3 space-y-2 w-full text-xs">
                   <div className="flex text-[#fff] flex-col items-stretch w-full mb-4 gap-4 relative">
-                  
                     <Input
                       placeholder="Email"
                       name="email"
@@ -108,7 +106,12 @@ function LoginFprm() {
                     <div className="w-full flex justify-center">
                       <p>
                         Already have an account?{" "}
-                        <span onClick={()=>navigate('/signup')} className="text-[15px] cursor-pointer">Signup</span>
+                        <span
+                          onClick={() => navigate("/signup")}
+                          className="text-[15px] cursor-pointer"
+                        >
+                          Signup
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -118,7 +121,7 @@ function LoginFprm() {
           </div>
         </form>
       </div>
-      <Toaster/>
+      <Toaster />
     </div>
   );
 }

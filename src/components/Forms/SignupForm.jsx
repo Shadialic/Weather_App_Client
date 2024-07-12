@@ -27,12 +27,11 @@ function SignupForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted", formData);
     try {
       const userData = await UserData(formData);
       toast.success(userData.message);
-      if(userData.userData){
- navigate('/login')
+      if (userData.userData) {
+        navigate("/login");
       }
     } catch (err) {
       console.log(err);

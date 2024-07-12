@@ -1,12 +1,12 @@
-import React from 'react'
-import SignupForm from '../../../components/Forms/SignupForm'
+import React from "react";
+import SignupForm from "../../../components/Forms/SignupForm";
 
 function SignupPage() {
   return (
     <div>
-        <SignupForm/>
+      <SignupForm />
     </div>
-  )
+  );
 }
 
-export default SignupPage
+export default SignupPage;

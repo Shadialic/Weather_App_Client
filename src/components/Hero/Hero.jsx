@@ -21,8 +21,6 @@ function Hero() {
       navigator.geolocation.getCurrentPosition(
         async (position) => {
           const { latitude, longitude } = position.coords;
-          setLat(latitude);
-          setLong(longitude);
           const data = await getWeatherByCoords(latitude, longitude);
           setWeatherData(data);
         },
